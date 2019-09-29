@@ -1,0 +1,23 @@
+{
+  "name": "roty",
+  "version": "1.0.8",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "roty-watch": "./bin/watch.js",
+    "roty-build": "./bin/build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^3.0.1",
+    "rollup": "^1.21.4",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.24.2",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.3"
+  }
+}
