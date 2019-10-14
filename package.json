@@ -8,16 +8,22 @@
   },
   "bin": {
     "roty-watch": "./bin/watch.js",
-    "roty-build": "./bin/build.js"
+    "roty-build": "./bin/build.js",
+    "roty-server": "./bin/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "commander": "^3.0.1",
+    "koa": "^2.10.0",
+    "koa-static": "^5.0.0",
     "rollup": "^1.21.4",
     "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-typescript2": "^0.24.2",
     "tslib": "^1.10.0",
     "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "koa2-cors": "^2.0.6"
   }
 }
