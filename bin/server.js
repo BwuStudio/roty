@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // 引入koa
 const koa = require('koa');
 const path = require('path')
