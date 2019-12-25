@@ -2,6 +2,8 @@
 const path = require('path')
 const typescript2 = require('rollup-plugin-typescript2')
 const rollup = require('rollup');
+const commonjs = require('@rollup/plugin-commonjs')
+const resolve = require('@rollup/plugin-node-resolve')
 
 process.title = 'roty-watch';
 
@@ -13,7 +15,14 @@ var m = path.resolve(process.cwd(), './input.ts')
 const inputOptions = {
     input: m,
     plugins: [
+        
+        resolve({
+            browser: true,
+            preferBuiltins: false, 
+        }),
+        commonjs(),
         typescript2({
+            
             clean: true,
             typescript: require('typescript'),
             tsconfigOverride: {

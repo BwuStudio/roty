@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const path = require('path')
 const typescript2 = require('rollup-plugin-typescript2')
-const typescript = require('rollup-plugin-typescript')
+const commonjs = require('@rollup/plugin-commonjs')
+const resolve = require('@rollup/plugin-node-resolve')
 const rollup = require('rollup');
 process.title = 'roty-build';
 
@@ -9,6 +10,11 @@ process.title = 'roty-build';
 const inputOptions = {
     input: path.resolve(process.cwd(), './input.ts'),
     plugins: [
+        resolve({
+            browser: true,
+            preferBuiltins: false, 
+        }),
+        commonjs(),
         typescript2({
             clean: true,
             typescript: require('typescript'),
